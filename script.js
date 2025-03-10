@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const formData = new FormData(form);
 
-        fetch('process_message.php', {
+        fetch('message.php', {
             method: 'POST',
             body: formData
         })
