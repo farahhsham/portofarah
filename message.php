@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $pesan = $_POST['pesan'];
     
-    $sql = "INSERT INTO inkaaa (nama, email, pesan) VALUES ('$nama', '$email', '$pesan')";
+    $sql = "INSERT INTO farahsmha (nama, email, pesan) VALUES ('$nama', '$email', '$pesan')";
     
     if ($conn->query($sql) === TRUE) {
         echo "<script>
