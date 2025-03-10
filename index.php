@@ -6,7 +6,7 @@ if(isset($_POST['kirim'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $pesan = mysqli_real_escape_string($conn, $_POST['pesan']);
     
-    $query = "INSERT INTO inkaaa (nama, email, pesan) VALUES ('$nama', '$email', '$pesan')";
+    $query = "INSERT INTO farahsmha (nama, email, pesan) VALUES ('$nama', '$email', '$pesan')";
     
     if(mysqli_query($conn, $query)) {
         echo "<script>alert('Pesan berhasil dikirim!');</script>";
@@ -248,8 +248,8 @@ if(isset($_POST['kirim'])) {
         <p>Silakan tinggalkan pesan, saya akan segera membalas!</p>
         <form class="contact-form" action="message.php" method="POST">
             <div class="input-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                <label for="nama">Name</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
             </div>
 
             <div class="input-group">
@@ -258,8 +258,8 @@ if(isset($_POST['kirim'])) {
             </div>
 
             <div class="input-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+                <label for="pesan">Message</label>
+                <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
             </div>
 
             <button type="submit">Send Message</button>
